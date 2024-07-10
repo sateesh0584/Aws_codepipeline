@@ -3,7 +3,7 @@ version: 0.2
 env:
   parameter-store:
     Docker_username: "/myapp/docker-credentials/username"
-    Docker_password: "/myapp/docker-credentials/password"
+    Docker_password: "/myapp/docker-credentials/password" 
     Docker_url: "/myapp/docker-registry/url"
 
 phases:
