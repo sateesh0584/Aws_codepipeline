@@ -3,16 +3,16 @@ version: 0.2
 env:
   parameter-store:
     Docker_username: "/myapp/docker-credentials/username"
-    Docker_password: "/myapp/docker-credentials/password" 
+    Docker_password: "/myapp/docker-credentials/password"
     Docker_url: "/myapp/docker-registry/url"
 
 phases:
   install:
     runtime-versions:
       python: 3.11
-    pre_build:
-      commands:
-        - pip install -r simple-python-app/requirements.txt
+  pre_build:
+    commands:
+      - pip install -r simple-python-app/requirements.txt
   build:
     commands:
       - cd simple-python-app
@@ -27,5 +27,7 @@ phases:
 artifacts:
   files:
     - '**/*'
-
-
+  base-directory: '.'
+  discard-paths: yes
+  name: build-output
+  destination: 's3://sateesh1075/'
