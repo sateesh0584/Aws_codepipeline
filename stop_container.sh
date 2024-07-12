@@ -8,6 +8,6 @@ containerID=$(docker ps -q --filter ancestor=sateesh0584/simple-python-flask)
 if [ ! -z "$containerID" ]; then
     docker rm -f "$containerID" 
     echo "Container $containerID stopped and removed."
-else
+else 
     echo "No running container found."
 fi
