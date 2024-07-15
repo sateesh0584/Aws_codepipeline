@@ -6,3 +6,4 @@ docker pull sateesh0584/simple-python-flask
   
 # Run the Docker image as a container
 docker run -d -p 7000:7000 sateesh0584/simple-python-flask 
+ 
